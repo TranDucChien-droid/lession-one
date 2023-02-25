@@ -23,8 +23,6 @@ function Question8() {
     return res;
   };
 
-  console.log(arr1.map((item) => item["make"]));
-
   const title = (
     <>
       8. I have an array like this: const arr1 = [{"{"} make: 'audi', model:
@@ -111,9 +109,24 @@ function Question8() {
   );
 
   const codes = `
-  const result = (array) => {
-    const temp = array.sort((a, b) => b - a);
-    return [temp[0], temp[1]];
+  const arr1 = [
+    { make: "audi", model: "r8", year: "2012" },
+    { make: "audi", model: "rs5", year: "2013" },
+    { make: "ford", model: "mustang", year: "2012" },
+    { make: "ford", model: "fusion", year: "2015" },
+    { make: "kia", model: "optima", year: "2012" },
+  ];
+
+  const result = (keyProp, inputArr) => {
+    let res = {};
+    inputArr.forEach((item) => {
+      if (!res.hasOwnProperty(item[keyProp])) {
+        res[item[keyProp]] = [item];
+      } else {
+        res[item[keyProp]].push(item);
+      }
+    });
+    return res;
   };
   `;
 
