@@ -90,7 +90,7 @@ function Question10() {
         </>
       }
       // result={JSON.stringify(result(array, sum))}
-      logResult={result(array, sum)}
+      // logResult={result(array, sum)}
     />
   );
 }
