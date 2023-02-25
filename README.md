@@ -1,1 +1,1 @@
-Run npm start để xem câu trả lười
+Run npm start để xem câu trả lời
