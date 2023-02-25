@@ -5,7 +5,9 @@ import "./style.css";
 function AnswerSheet({ title, codes, result, logResult }) {
   const onChange = (e) => {
     if (e.length <= 0) return;
-    console.log(logResult);
+    if (logResult) {
+      console.log(logResult);
+    }
   };
 
   return (
